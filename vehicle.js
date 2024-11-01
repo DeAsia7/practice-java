@@ -13,15 +13,20 @@ export class vehicle {
 
 export class car extends vehicle {
 
-    constructor(make, model, year, doors)
-    super(make, model, year)
-this.doors = doors
+    constructor(make, model, year, doors){
+        super(make, model, year)
+        this.doors = doors
+    }
+    
 
 }
 
 export class motorcycle extends vehicle {
 
-    constructor(make, model, year, doors)
-    super(make, model, year)
+    constructor(make, model, year, type){
+        super(make, model, year)
+        this.type=type
+    }
+    
 
 }

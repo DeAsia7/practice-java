@@ -1,46 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>practice java 3</title>
-    <link href="style.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>practice java 3</title>
+        <link href="style.css" rel="stylesheet">
 </head>
+
 <body>
-   <h1 id="title1" >Select type of a Vehicle</h1>
-    <form onsubmit=createvehicle()> 
-        <label> Type of Vehicle</label>
-        <select onchange="hideInputs()">
-<option value="Select a type of vehicle"> --- Select an option</option>
+        <h1 id="title1">Select type of a Vehicle</h1>
+        <form onsubmit="creatvehicle(event)">
+                <label> Type of Vehicle</label>
+                <select id="inputType" onchange="hideInputs()">
+                        <option value="Select a type of vehicle"> --- Select an option</option>
 
-<option value="motorcycle"> Motorcycle</option>
-<option value="car"> Car</option>
-        </select>
+                        <option value="motorcycle"> Motorcycle</option>
+                        <option value="car"> Car</option>
+                </select>
+                <p></p>
+                <div></div>
+                <label for="inputmake"> Make</label>
+                <input id="inputmake" name="inputMake" type="text" required>
+
+                <label for="inputmodel"> Model</label>
+                <input id="inputmodel" name="inputModel" type="text" required>
+
+
+                <label for="inputyear"> Year</label>
+                <input id="inputyear" name="inputYear" type="number" min="1990" value="1990" required>
+
+                <label id="labelDoors">Doors</label>
+                <input id="inputdoor" name="inputdoor" type="number" min="2" make="5" value="2">
+
+                <label id="labelpayload">Payload capacity</label>
+                <input id="inputpayload" name="inputpayload" type="number" min="2" make="5" value="2">
+
+
+                <button>Submit</button>
+
+        </form>
         <p></p>
-<div></div>
-        <label for="inputmake"> Make</label>
-        <input id="inputmake" name="inputMake" type="text" required>
-
-        <label for="inputmodel"> Model</label>
-        <input id="inputmodel" name="inputModel" type="text" required>
-
-
-        <label for="inputyear"> Year</label>
-        <input id="inputyear" name="inputYear" type="number" min="1990" value="1990" required>
-       
-<label id="labelDoors">Doors</label>
-<input id="inputdoor" name="inputdoor" type="number" min="2" make="5" value="2">
-
-<label id="labelpayload">Payload capacity</label>
-<input id="inputpayload" name="inputpayload" type="number" min="2" make="5" value="2"> 
-
-
-        <button>Submit</button>
-
-    </form>
-    <p></p>
-    <p id="resultcar"></p>
-    <script type="module" src="script.js"></script>
+        <p id="resultcar"></p>
+        <script type="module" src="script.js"></script>
 
 </body>
+
 </html>
